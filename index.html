@@ -1,1 +1,160 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Timetable</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">
+                <i class="fas fa-calendar-alt"></i> College Timetable
+            </h1>
+            <p class="header-subtitle">Weekly Schedule • Monday, Thursday, Friday Focus</p>
+        </header>
+
+        <main class="timetable">
+            <!-- Monday Section -->
+            <section class="day-section" data-day="monday">
+                <div class="day-header">
+                    <i class="fas fa-calendar-day"></i>
+                    <h2>Monday</h2>
+                    <span class="class-count">2 Classes</span>
+                </div>
+                <div class="classes-list">
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">12:45 PM - 3:00 PM</div>
+                            <h3 class="class-subject">IT - First Lesson</h3>
+                            <p class="class-teacher">Teacher: Nohreen</p>
+                            <p class="class-room">Duration: 2h 15m</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">3:15 PM - 5:30 PM</div>
+                            <h3 class="class-subject">IT - Second Lesson</h3>
+                            <p class="class-teacher">Teacher: Pavan</p>
+                            <p class="class-room">Duration: 2h 15m</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thursday Section -->
+            <section class="day-section" data-day="thursday">
+                <div class="day-header">
+                    <i class="fas fa-calendar-day"></i>
+                    <h2>Thursday</h2>
+                    <span class="class-count">4 Classes</span>
+                </div>
+                <div class="classes-list">
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">9:00 AM - 11:00 AM</div>
+                            <h3 class="class-subject">IT - First Lesson</h3>
+                            <p class="class-teacher">Teacher: Wendy Purdy</p>
+                            <p class="class-room">Duration: 2h</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">11:00 AM - 12:15 PM</div>
+                            <h3 class="class-subject">IT-TPA - Second Lesson</h3>
+                            <p class="class-teacher">Teacher: Wendy Purdy</p>
+                            <p class="class-room">Duration: 1h 15m</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">1:00 PM - 3:00 PM</div>
+                            <h3 class="class-subject">IT - Third Lesson</h3>
+                            <p class="class-teacher">Teacher: Wendy Purdy</p>
+                            <p class="class-room">Duration: 2h</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">3:30 PM - 5:00 PM</div>
+                            <h3 class="class-subject">GCSE-MATH - Fourth Lesson</h3>
+                            <p class="class-teacher">Teacher: Navid Ahmed</p>
+                            <p class="class-room">Duration: 1h 30m</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Friday Section -->
+            <section class="day-section" data-day="friday">
+                <div class="day-header">
+                    <i class="fas fa-calendar-day"></i>
+                    <h2>Friday</h2>
+                    <span class="class-count">3 Classes</span>
+                </div>
+                <div class="classes-list">
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">9:00 AM - 11:15 AM</div>
+                            <h3 class="class-subject">IT - First Lesson</h3>
+                            <p class="class-teacher">Teacher: Nohreen</p>
+                            <p class="class-room">Duration: 2h 15m</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">11:30 AM - 1:45 PM</div>
+                            <h3 class="class-subject">IT - Second Lesson</h3>
+                            <p class="class-teacher">Teacher: Nohreen</p>
+                            <p class="class-room">Duration: 2h 15m</p>
+                        </div>
+                    </div>
+                    <div class="class-card">
+                        <div class="class-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="class-content">
+                            <div class="class-time">1:45 PM - 3:15 PM</div>
+                            <h3 class="class-subject">GCSE-MATH - Third Lesson</h3>
+                            <p class="class-teacher">Teacher: GEM 8 Staff TBC</p>
+                            <p class="class-room">Duration: 1h 30m</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p><i class="fas fa-heart"></i> Custom Timetable • © 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
