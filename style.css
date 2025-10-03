@@ -1,1 +1,297 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background: linear-gradient(135deg, #e6f3ff 0%, #f0f8ff 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-title i {
+    font-size: 2rem;
+    color: #00d4ff; /* Subtle neon cyan */
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.header-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #4b5563;
+}
+
+/* Timetable Sections */
+.timetable {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.day-section {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.day-section:nth-child(1) { animation-delay: 0.1s; }
+.day-section:nth-child(2) { animation-delay: 0.2s; }
+.day-section:nth-child(3) { animation-delay: 0.3s; }
+
+.day-header {
+    background: rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px 16px 0 0;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.3); /* Neon border */
+    box-shadow: 
+        0 4px 20px rgba(59, 130, 246, 0.1),
+        0 0 20px rgba(0, 212, 255, 0.2); /* Subtle neon glow */
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.day-header:hover {
+    box-shadow: 
+        0 4px 20px rgba(59, 130, 246, 0.15),
+        0 0 30px rgba(0, 212, 255, 0.4); /* Enhanced neon on hover */
+}
+
+.day-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #00b8ff);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5); /* Neon top line */
+}
+
+.day-header i {
+    font-size: 1.2rem;
+    color: #00d4ff; /* Neon cyan icon */
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+.day-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e40af;
+    flex: 1;
+}
+
+.class-count {
+    background: rgba(0, 212, 255, 0.1);
+    color: #00d4ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.classes-list {
+    background: white;
+    border-radius: 0 0 16px 16px;
+    padding: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 212, 255, 0.2);
+    border-right: 1px solid rgba(0, 212, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Class Cards */
+.class-card {
+    display: flex;
+    gap: 15px;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.class-card:last-child {
+    border-bottom: none;
+}
+
+.class-card:hover {
+    background: rgba(0, 212, 255, 0.05);
+    transform: translateX(5px);
+    box-shadow: inset 0 2px 4px rgba(0, 212, 255, 0.1);
+    border-left: 3px solid #00d4ff; /* Neon left accent */
+}
+
+.class-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00d4ff;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2); /* Neon icon glow */
+}
+
+.class-content {
+    flex: 1;
+}
+
+.class-time {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 5px;
+}
+
+.class-subject {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 4px;
+}
+
+.class-teacher {
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.class-room {
+    font-size: 0.9rem;
+    color: #718096;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 0.9rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.footer i {
+    color: #00d4ff;
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .header-title {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .day-header {
+        padding: 18px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .day-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .class-card {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 20px;
+    }
+
+    .class-icon {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .class-subject {
+        font-size: 1.1rem;
+    }
+}
